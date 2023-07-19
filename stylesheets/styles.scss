@@ -376,6 +376,40 @@ footer{
 }
 
 //Tabs
+#searchDiv{
+    margin:auto;
+    
+
+    #searchBar{
+        font-size:15px;
+        height:25px;
+        background-color: #faf7eb;
+        font-family: 'Noto Serif', serif;
+        border-radius:5px;
+        border-color:$secondary-color;
+    }
+
+    #searchButton{
+        margin-bottom:10px;
+        padding:4px;
+        border:none;
+        border-radius:3px;
+        background-color: $accent-color;
+        color:$background-color;
+        font-size: 16px;
+        align-self:center;
+        height:30px;
+        font-family: 'Noto Serif', serif;
+        transition: 1s;
+    }
+
+    #searchButton:hover{
+        background-color: #677d5b;
+        color:#d8cfb0;
+        
+    }
+}
+
 #table{
     width:80%;
     margin:auto;

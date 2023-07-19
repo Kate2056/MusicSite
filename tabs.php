@@ -51,7 +51,12 @@
             <a href="https://www.youtube.com/channel/UCuKmHoCUaswvfWT5S1H1q0w"><img src="images/youtube.png" alt="youtube"></a>
         </div>
     </div>
-   <table id="table">
+    <form method='POST' action="tabs.php">
+        <div id="searchDiv">
+            <input type="text" name="text" placeholder="Search Available Tabs" id="searchBar">
+            <input type="submit" value="Search" name="submit" id="searchButton">
+        </div>
+    <table id="table">
         <tr>
             <th>Song Name</th><th>Artist</th><th class='hiddenTab'>Genre</th><th>Difficulty</th><th class='hiddenTab'>Composer</th><th class='hiddenTab'>Instrument</th>
         </tr>
@@ -64,7 +69,7 @@
         ?>
     </table>
     
-
+    </form>
     <footer>
         <div id="footerSocialIcons">
             <a href="https://www.facebook.com/BriggsFamilyBand"><img src="images/facebook.png" alt="facebook"></a>
