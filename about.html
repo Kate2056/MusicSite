@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="music, bluegrass, tabs, mandolin, tablature, kaitlyn, briggs, teacher, music, notation, guitar,
+    surf, lessons, student, lesson, beginner, intermediate, advanced, professional" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/x-icon" href="images/mandolinsIcon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lugrasimo&family=Noto+Serif:wght@300;400;700&display=swap" rel="stylesheet">
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }       
+
+        
+    </script>
+    <title>Home</title>
+</head>
+<body onload="currentSlide(1)">
+    <div id="header">
+        <h1 id="nameHeader">Kaitlyn Briggs</h1>
+        <nav>
+            
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.php">Contact</a></li>
+                <li><a href="tabs.php">Tabs</a></li>
+            </ul>
+        </nav>
+        <div id="headerSocialIcons">
+            <a href="https://www.facebook.com/BriggsFamilyBand"><img src="images/facebook.png" alt="facebook"></a>
+            <a href="https://www.instagram.com/kaitlyn.briggs.26/"><img src="images/instagram.png" alt="instagram"></a>
+            <a href="https://www.youtube.com/channel/UCuKmHoCUaswvfWT5S1H1q0w"><img src="images/youtube.png" alt="youtube"></a>
+        </div>
+    </div>
+    <div id="aboutDesc">
+        <p> Kaitlyn Briggs is a 19 year old bluegrass mandolin player from central Iowa. Kaitlyn has always loved music. She started out playing piano 
+             at 5 years old, and began playing mandolin when she was 9. 
+             Since then, she has started learning to play guitar, bass, banjo, and percussion. Kaitlyn loves listening to and playing
+             many different genres of music, including bluegrass, country, rock, blues, jazz, surf, and spaghetti western theme songs. 
+             She has played mandolin for her family's bluegrass band, the <a href="https://www.facebook.com/BriggsFamilyBand">Briggs Family Band</a>, 
+             since 2013, and loves to jam. Some of Kaitlyn's favorite mandolin heroes are Sam Bush, Sierra Hull, Adam Steffey,
+             David Grisman, and Chris Thile. Kaitlyn gives private mandolin and guitar lessons for beginner to intermediate players. 
+        </p>
+        <figure>
+            <img src="images/me.png" alt="picture of kaitlyn briggs">
+            <figcaption class="photo-credit">Photo Credit: Creative Design Photography</figcaption>
+        </figure>
+        
+    </div>
+    <div id="slideshowContainer">
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 6</div>
+            <img src="images/BackboneYoungMe.jpg" style="max-width:100%;">
+            <div class="textContainer"><p class="text">Youth Showcase at Backbone Bluegrass</p></div>
+          </div>
+        
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 6</div>
+            <img src="images/fullBand.jpg" style="max-width:100%;">
+            <div class="textContainer"><p class="text">Briggs Family Band (Creative Design Photography)</p></div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 6</div>
+            <img src="images/stateFairContest.jpg" style="max-width:100%; ">
+            <div class="textContainer"><p class="text">Iowa State Fair Mandolin Contest</p></div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">4 / 6</div>
+            <img src="images/vote4Pedro.jpg" style="max-width:100%; ">
+            <div class="textContainer"><p class="text">Jamming with a Vote For Pedro Shirt</p></div>
+          </div>
+        
+          <div class="mySlides fade">
+            <div class="numbertext">5 / 6</div>
+            <img src="images/youngMe.jpg" style="max-width:100%;">
+            <div class="textContainer"><p class="text">Youth Showcase at Bloomfield, IA Festival</p></div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">6 / 6</div>
+            <img src="images/youngMeAndAshlyn.jpg" style="max-width:100%; ">
+            <div class="textContainer"><p class="text">Jamming with sister Ashlyn Briggs</p></div>
+          </div>
+
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+          <span class="dot" onclick="currentSlide(6)"></span>
+        </div>
+    </div>
+    
+
+    <footer>
+        <div id="footerSocialIcons">
+            <a href="https://www.facebook.com/BriggsFamilyBand"><img src="images/facebook.png" alt="facebook"></a>
+            <a href="https://www.instagram.com/kaitlyn.briggs.26/"><img src="images/instagram.png" alt="instagram"></a>
+            <a href="https://www.youtube.com/channel/UCuKmHoCUaswvfWT5S1H1q0w"><img src="images/youtube.png" alt="youtube"></a>
+        </div>
+        <div id="copyright">
+            <p>Copyright © 2023</p>
+            <p>Website Designed and Built by Kaitlyn Briggs</p>
+        </div>
+    </footer>
+</body>
+</html>
