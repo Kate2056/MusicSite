@@ -8,6 +8,7 @@ body {
   font-family: "Noto Serif", serif;
   font-weight: 300;
   box-sizing: border-box;
+  min-height: 1vh;
 }
 
 #nameHeader {
@@ -368,7 +369,7 @@ footer p {
 }
 
 #table {
-  width: 80%;
+  max-width: 90%;
   margin: auto;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -395,6 +396,7 @@ th {
 td {
   font-weight: 500;
   font-size: 16px;
+  padding: 5px;
 }
 
 #tabTitle {
