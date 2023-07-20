@@ -9,12 +9,21 @@ $font-color:#30291f;
     margin:0;
 }
 
+html{
+    height:100vh;
+}
+
+#mainDiv{
+    min-height:100vh;
+
+}
+
 body{
     background-color: $background-color;
     font-family: 'Noto Serif', serif;
     font-weight: 300;
     box-sizing: border-box;
-    min-height:1vh;
+   
 }
 
 #nameHeader{
@@ -281,6 +290,7 @@ h1{
 #error{
     color:#465c3a;
     font-size:20px;
+    text-align: center;
 }
 
 form{
@@ -418,11 +428,13 @@ footer{
     margin-bottom:20px;
     text-align:center;
     
+    
 }
 
 #table, td, th{
     border:2px solid $font-color;
     border-collapse: collapse;
+    background-color: #fcf7e5;
 
     a{
         color:#4c623f;
@@ -437,6 +449,7 @@ footer{
 th{
     background-color: $accent-color;
     color:$header-color;
+    padding:5px;
 }
 
 td{

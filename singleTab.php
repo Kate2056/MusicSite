@@ -50,6 +50,7 @@
             <a href="https://www.youtube.com/channel/UCuKmHoCUaswvfWT5S1H1q0w"><img src="images/youtube.png" alt="youtube"></a>
         </div>
     </div>
+    <div id="mainDiv">
    <?php
 
     if($stmt->rowCount() == 0){
@@ -70,7 +71,7 @@
     }
 ?>
     
-
+</div>
     <footer>
         <div id="footerSocialIcons">
             <a href="https://www.facebook.com/BriggsFamilyBand"><img src="images/facebook.png" alt="facebook"></a>

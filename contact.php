@@ -147,7 +147,7 @@
         <p><strong>Email: </strong>kaitlynbriggs99@gmail.com</p>
         <p><strong>Phone: </strong>515-729-9133</p>
     </div>
-    
+    <div id="mainDiv">
     <form action="contact.php" method="POST">
         <span id="error"><?php echo $errorMsg; ?></span>
         <p>
@@ -172,7 +172,7 @@
             <input type="reset" value="Reset" class="button">
         </p>
     </form> 
-    
+    </div>
 
     <footer>
         <div id="footerSocialIcons">

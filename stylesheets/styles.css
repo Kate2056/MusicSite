@@ -3,12 +3,19 @@
   margin: 0;
 }
 
+html {
+  height: 100vh;
+}
+
+#mainDiv {
+  min-height: 100vh;
+}
+
 body {
   background-color: #fbf5de;
   font-family: "Noto Serif", serif;
   font-weight: 300;
   box-sizing: border-box;
-  min-height: 1vh;
 }
 
 #nameHeader {
@@ -254,6 +261,7 @@ h1 {
 #error {
   color: #465c3a;
   font-size: 20px;
+  text-align: center;
 }
 
 form {
@@ -379,6 +387,7 @@ footer p {
 #table, td, th {
   border: 2px solid #30291f;
   border-collapse: collapse;
+  background-color: #fcf7e5;
 }
 #table a, td a, th a {
   color: #4c623f;
@@ -391,6 +400,7 @@ footer p {
 th {
   background-color: #99A98F;
   color: #f0e7c7;
+  padding: 5px;
 }
 
 td {

@@ -3,7 +3,8 @@
 
     $search = false;
 
-?>
+    $errorMessage = "";
+?>  
         <!DOCTYPE html>
         <html lang="en">
         <head>
@@ -57,7 +58,10 @@ if(isset($_GET['submit'])){
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
     }
     catch(Exception $e){
-        echo "\n Issues with SQL, error message: " . $e->getMessage();
+        $errorMessage =  "\n Issues with SQL, error message: " . $e->getMessage();
+    }
+    if($stmt->rowCount() == 0){
+        $errorMessage = "Uh oh! No tabs found.";
     }
     }else{
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -71,16 +75,17 @@ if(isset($_GET['submit'])){
             $stmt->setFetchMode(PDO::FETCH_ASSOC);
         }
         catch(Exception $e){
-            echo "\n Issues with SQL, error message: " . $e->getMessage();
+            $errorMessage = "\n Issues with SQL, error message: " . $e->getMessage();
         }
     }
 
-?>
+?> <div id="mainDiv">
     <form method='GET' action="tabs.php">
     <div id="searchDiv">
                     <input type="text" name="userSearch" placeholder="Search Available Tabs" id="searchBar">
                     <input type="submit" value="Search" name="submit" id="searchButton">
                 </div>
+    <span id="error"><?php echo $errorMessage;?></span>
     <table id="table">
         <tr>
             <th>Song Name</th><th>Artist</th><th class='hiddenTab'>Genre</th><th>Difficulty</th><th class='hiddenTab'>Composer</th><th class='hiddenTab'>Instrument</th>
@@ -95,6 +100,7 @@ if(isset($_GET['submit'])){
     </table>
     
     </form>
+    </div>
     <footer>
         <div id="footerSocialIcons">
             <a href="https://www.facebook.com/BriggsFamilyBand"><img src="images/facebook.png" alt="facebook"></a>
