@@ -6,6 +6,8 @@
 
     if(isset($_POST['submit'])){
 
+    	if(!empty($_POST['homePhone'])){
+
         if($_POST['name'] == "" || $_POST['email'] == "" || $_POST['message'] == ""){
             $errorMsg = "Please fill out all fields";
 
@@ -43,10 +45,13 @@
                 $errorMsg = "Issues with progam, error message: " . $e->getMessage();;
             }
         }
+        }else{
+		    $errorMsg = "Failed Honeypot Test. Email was not sent";
             
-
-        
+        }
     }
+        
+        
     if(!$showForm){
 
       
@@ -103,7 +108,6 @@
             <p>Website Designed and Built by Kaitlyn Briggs</p>
         </div>
     </footer>
-    <sript src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
 </html>
 
@@ -122,6 +126,12 @@
     <link rel="icon" type="image/x-icon" href="images/mandolinsIcon.png"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lugrasimo&family=Noto+Serif:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <style>
+    	#homePhoneBox{
+    		display:none;
+    	}
+    </style>
     <title>Home</title>
 </head>
 <body>
@@ -162,15 +172,20 @@
             <label for="phone">Phone: <em class="required" style="visibility:hidden;">*</em></label>
             <input name="phone" id="phone" type="text" value="">
         </p>
+        <p id="homePhoneBox">
+            <label for="homePhone">Home Phone: </label>
+            <input name="homePhone" id="homePhone" type="text" value="">
+        </p>
         <p>
             <label for="message" >Message: <em class="required">*</em></label>
             <textarea name="message" id="message"></textarea>
         </p>
-        <div class="g-recaptcha" data-sitekey="6Lf8Ph4lAAAAAL1qOW5lA60VcKXfcHWyeKkCOj6_"></div>
+        <div class="g-recaptcha" data-sitekey="6LfLOkwnAAAAAB_0DFOf6y1I5hdua3-Axvm4pjuN"></div>
         <p class="center">
             <input type="submit" name="submit" value="Submit" class="button">
             <input type="reset" value="Reset" class="button">
         </p>
+        
     </form> 
     </div>
 
@@ -185,7 +200,6 @@
             <p>Website Designed and Built by Kaitlyn Briggs</p>
         </div>
     </footer>
-    <sript src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
 </html>
 <?php 
